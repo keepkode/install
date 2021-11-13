@@ -1,20 +1,25 @@
 #!/usr/bin/env bash
 
 # bootsrapping files for system setup
-
 # systemcheck
 clear
-
 echo "Bootstrap installation files\n"
 
-UNAME="$(uname)"
+OSTYPE="$(uname -s)"
 
-case $UNAME in
+case $OSTYPE in
   'Darwin')
-    OSNAME='MacOS'
+    OS='MacOS'
+    CPUTYPE="$(uname -p)"
+    if [[ "$CPUTYPE" == "arm64" ]]
+    then
+      CPU="Apple"
+    else
+      CPU="Intel"
+    fi
     ;;
   'Linux')
-    OSNAME='Linux'
+    OS='Linux'
     ;;
   *)
     ;;
@@ -22,6 +27,8 @@ esac
 
 echo "Systemcheck\n"
 echo "-----------\n"
-echo "$OSNAME detected"
+echo "OS:  $OS"
+echo "CPU: $CPU"
 
-
+# set ZDOTDIR to $HOME/.config/zsh
+# sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
