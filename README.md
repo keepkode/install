@@ -1,0 +1,2 @@
+# install
+Automatic system setup
