@@ -1,9 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # bootsrapping files for system setup
 # systemcheck
 clear
-echo "Param: $0"
 echo "Bootstrap installation files\n"
 
 OSTYPE="$(uname -s)"
@@ -30,6 +29,7 @@ echo "Systemcheck\n"
 echo "-----------\n"
 echo "OS:  $OS"
 echo "CPU: $CPU"
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/$OS.sh)" mac
+
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/$OS.sh)"
 # set ZDOTDIR to $HOME/.config/zsh
 # sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
