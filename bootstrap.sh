@@ -29,6 +29,6 @@ echo "Systemcheck\n"
 echo "-----------\n"
 echo "OS:  $OS"
 echo "CPU: $CPU"
-
+/bin/zsh -c "$(curls -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/mac.sh)"
 # set ZDOTDIR to $HOME/.config/zsh
 # sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
