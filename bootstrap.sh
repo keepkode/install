@@ -2,6 +2,9 @@
 
 # bootsrapping files for system setup
 # systemcheck
+
+
+
 clear
 echo "Bootstrap installation files\n"
 
@@ -9,7 +12,7 @@ OSTYPE="$(uname -s)"
 
 case $OSTYPE in
   'Darwin')
-    OS='mac'
+    OS='macOS'
     CPUTYPE="$(uname -p)"
     if [[ "$CPUTYPE" == "arm64" ]]
     then
@@ -29,6 +32,12 @@ echo "Systemcheck\n"
 echo "-----------\n"
 echo "OS:  $OS"
 echo "CPU: $CPU"
+
+
+
+
+
+
 
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/$OS.sh)"
 # set ZDOTDIR to $HOME/.config/zsh
