@@ -23,3 +23,5 @@ esac
 echo "Systemcheck\n"
 echo "-----------\n"
 echo "$OSNAME detected"
+
+
