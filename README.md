@@ -1,2 +1,3 @@
-# install
-Automatic system setup
+# README
+
+## Automatic system setup
