@@ -9,7 +9,7 @@ OSTYPE="$(uname -s)"
 
 case $OSTYPE in
   'Darwin')
-    OS='MacOS'
+    OS='mac'
     CPUTYPE="$(uname -p)"
     if [[ "$CPUTYPE" == "arm64" ]]
     then
@@ -19,7 +19,7 @@ case $OSTYPE in
     fi
     ;;
   'Linux')
-    OS='Linux'
+    OS='linux'
     ;;
   *)
     ;;
@@ -29,6 +29,6 @@ echo "Systemcheck\n"
 echo "-----------\n"
 echo "OS:  $OS"
 echo "CPU: $CPU"
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/mac.sh)"
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/$OS.sh)"
 # set ZDOTDIR to $HOME/.config/zsh
 # sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
