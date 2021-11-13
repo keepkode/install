@@ -5,6 +5,8 @@
 # systemcheck
 clear
 
+echo "Bootstrap installation files\n"
+
 UNAME="$(uname)"
 
 case $UNAME in
@@ -18,4 +20,6 @@ case $UNAME in
     ;;
 esac
 
-echo $OSNAME
+echo "Systemcheck\n"
+echo "-----------\n"
+echo "$OSNAME detected"
