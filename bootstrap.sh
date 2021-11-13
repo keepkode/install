@@ -3,6 +3,7 @@
 # bootsrapping files for system setup
 # systemcheck
 clear
+echo $1
 echo "Bootstrap installation files\n"
 
 OSTYPE="$(uname -s)"
