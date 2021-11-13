@@ -17,3 +17,5 @@ case $UNAME in
   *)
     ;;
 esac
+
+echo $OSNAME
