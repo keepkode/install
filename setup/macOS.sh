@@ -41,6 +41,8 @@ prequisites=(
 
 )
 
+# sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
+
 for key value in ${(kv)prequisites}; do
   case $value in
     'variable')
