@@ -33,12 +33,6 @@ echo "-----------\n"
 echo "OS:  $OS"
 echo "CPU: $CPU"
 
-
-
-
-
-
-
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/$OS.sh)"
 # set ZDOTDIR to $HOME/.config/zsh
 # sed -i '' -e '1s/^/# Setup ZDOTDIR\nZDOTDIR=$HOME\/\.config\/zsh\n/'
