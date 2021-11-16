@@ -23,6 +23,7 @@ fi
 
 if [ ! -f $HOMEBREW ];then
   echo "installing Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else 
   echo "Homebrew installed"
 fi

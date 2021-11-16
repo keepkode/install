@@ -39,5 +39,5 @@ fi
 
 echo "\nStarting Setup"
 echo "--------------\n"
-echo "- downloading macOS Setupfiles"
 
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/keepkode/install/main/setup/${OS}.sh)"
